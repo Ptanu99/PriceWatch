@@ -1,7 +1,9 @@
-package com.example.userAuth.userAuth.service;
+package com.pricewatch.userAuth.service;
 
-import com.example.userAuth.userAuth.entity.User;
-import com.example.userAuth.userAuth.repository.UserRepository;
+import com.pricewatch.userAuth.dto.UserResponse;
+import com.pricewatch.userAuth.entity.User;
+import com.pricewatch.userAuth.entity.UserPrincipal;
+import com.pricewatch.userAuth.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -21,7 +23,7 @@ public class UserService {
     private AuthenticationManager authenticationManager;
 
     public String register(User user) {
-        if (userRepository.findByUsername(user.getUsername()).isPresent()) {
+        if (userRepository.findByEmail(user.getEmail()).isPresent()) {
             throw new RuntimeException("Username already exists");
         }
         user.setPassword(encoder.encode(user.getPassword()));
@@ -34,6 +36,12 @@ public class UserService {
         if (authentication.isAuthenticated()) return jwtService.generateToken(user.getUsername());
 
         return "Login Failed";
+    }
+
+    public String loadUser(UserPrincipal principal) {
+        String userEmail = principal.getUserEmail();
+        User user = userRepository.findByEmail(userEmail).orElseThrow();
+        return new UserResponse(user.getId(), user.getEmail(), user.getUsername()).toString();
     }
 }
 

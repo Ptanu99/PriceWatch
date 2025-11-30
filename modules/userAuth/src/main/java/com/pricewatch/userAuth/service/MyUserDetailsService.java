@@ -1,8 +1,8 @@
-package com.example.userAuth.userAuth.service;
+package com.pricewatch.userAuth.service;
 
-import com.example.userAuth.userAuth.entity.User;
-import com.example.userAuth.userAuth.entity.UserPrincipal;
-import com.example.userAuth.userAuth.repository.UserRepository;
+import com.pricewatch.userAuth.entity.User;
+import com.pricewatch.userAuth.entity.UserPrincipal;
+import com.pricewatch.userAuth.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

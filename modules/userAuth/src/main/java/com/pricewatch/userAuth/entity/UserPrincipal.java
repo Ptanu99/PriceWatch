@@ -1,4 +1,4 @@
-package com.example.userAuth.userAuth.entity;
+package com.pricewatch.userAuth.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -28,6 +28,10 @@ public class UserPrincipal implements UserDetails {
     @Override
     public String getUsername() {
         return user.getUsername();
+    }
+
+    public String getUserEmail() {
+        return user.getEmail();
     }
 
     @Override

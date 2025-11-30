@@ -1,7 +1,7 @@
-package com.example.userAuth.userAuth.security;
+package com.pricewatch.userAuth.security;
 
-import com.example.userAuth.userAuth.repository.UserRepository;
-import com.example.userAuth.userAuth.service.MyUserDetailsService;
+import com.pricewatch.userAuth.repository.UserRepository;
+import com.pricewatch.userAuth.service.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -37,7 +37,13 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
-        http.securityMatcher("/api/auth/**", "/hello").csrf(csrf -> csrf.disable()).authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/**").permitAll().anyRequest().authenticated()).httpBasic(Customizer.withDefaults()).sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS)).addFilterBefore(jwtfilter, UsernamePasswordAuthenticationFilter.class);
+        http.securityMatcher("/api/auth/**", "/hello")
+                .csrf(csrf -> csrf.disable())
+                .authorizeHttpRequests(auth -> auth.requestMatchers("/api/auth/**")
+                        .permitAll().anyRequest().authenticated())
+                .httpBasic(Customizer.withDefaults())
+                .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .addFilterBefore(jwtfilter, UsernamePasswordAuthenticationFilter.class);
 
         return http.build();
     }

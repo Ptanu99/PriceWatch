@@ -1,4 +1,4 @@
-package com.example.userAuth.userAuth;
+package com.pricewatch.userAuth.userAuth;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,4 +1,4 @@
-package com.example.userAuth.userAuth.entity;
+package com.pricewatch.userAuth.entity;
 
 import jakarta.persistence.*;
 
@@ -9,6 +9,19 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                '}';
+    }
+
+    @Column(unique = true, nullable = false)
+    private String email;
 
     @Column(unique = true, nullable = false)
     private String username;
@@ -39,13 +52,12 @@ public class User {
         this.password = password;
     }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 }
 
