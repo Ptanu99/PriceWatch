@@ -1,7 +1,7 @@
-package com.pricewatch.userAuth.security;
+package com.pricewatch.project.userAuth.security;
 
-import com.pricewatch.userAuth.service.JwtService;
-import com.pricewatch.userAuth.service.MyUserDetailsService;
+import com.pricewatch.project.userAuth.service.JwtService;
+import com.pricewatch.project.userAuth.service.MyUserDetailsService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

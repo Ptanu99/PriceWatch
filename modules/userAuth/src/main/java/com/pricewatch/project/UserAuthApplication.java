@@ -1,4 +1,4 @@
-package com.pricewatch.userAuth;
+package com.pricewatch.project;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

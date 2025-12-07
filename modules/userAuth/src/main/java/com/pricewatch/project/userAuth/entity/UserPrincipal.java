@@ -1,4 +1,4 @@
-package com.pricewatch.userAuth.entity;
+package com.pricewatch.project.userAuth.entity;
 
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -6,6 +6,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
 import java.util.List;
+import java.util.UUID;
 
 public class UserPrincipal implements UserDetails {
 
@@ -33,6 +34,8 @@ public class UserPrincipal implements UserDetails {
     public String getUserEmail() {
         return user.getEmail();
     }
+
+    public Long getUserId(){return user.getId();}
 
     @Override
     public boolean isAccountNonExpired() {

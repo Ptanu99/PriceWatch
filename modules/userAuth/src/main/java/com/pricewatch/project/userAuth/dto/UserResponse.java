@@ -1,4 +1,4 @@
-package com.pricewatch.userAuth.dto;
+package com.pricewatch.project.userAuth.dto;
 
 import lombok.*;
 import java.time.Instant;

@@ -1,7 +1,7 @@
-package com.pricewatch.userAuth.security;
+package com.pricewatch.project.userAuth.security;
 
-import com.pricewatch.userAuth.repository.UserRepository;
-import com.pricewatch.userAuth.service.MyUserDetailsService;
+import com.pricewatch.project.userAuth.repository.UserRepository;
+import com.pricewatch.project.userAuth.service.MyUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

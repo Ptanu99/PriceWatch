@@ -1,9 +1,9 @@
-package com.pricewatch.userAuth.service;
+package com.pricewatch.project.userAuth.service;
 
-import com.pricewatch.userAuth.dto.UserResponse;
-import com.pricewatch.userAuth.entity.User;
-import com.pricewatch.userAuth.entity.UserPrincipal;
-import com.pricewatch.userAuth.repository.UserRepository;
+import com.pricewatch.project.userAuth.dto.UserResponse;
+import com.pricewatch.project.userAuth.entity.User;
+import com.pricewatch.project.userAuth.entity.UserPrincipal;
+import com.pricewatch.project.userAuth.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;

@@ -1,4 +1,4 @@
-package com.pricewatch.userAuth.controller;
+package com.pricewatch.project.userAuth.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

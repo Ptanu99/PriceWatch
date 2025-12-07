@@ -1,4 +1,4 @@
-package com.pricewatch.userAuth.service;
+package com.pricewatch.project.userAuth.service;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;

@@ -1,6 +1,8 @@
-package com.pricewatch.userAuth.entity;
+package com.pricewatch.project.userAuth.entity;
 
 import jakarta.persistence.*;
+
+import java.util.UUID;
 
 @Entity
 @Table(name = "users")
